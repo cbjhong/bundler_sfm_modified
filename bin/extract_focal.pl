@@ -9,7 +9,7 @@ $BIN_PATH = `dirname $0`;
 
 chomp($BIN_PATH);
 
-$OS = `uname -o`;
+$OS = `uname -s`;
 chomp($OS);
 
 if ($OS eq "Cygwin") {

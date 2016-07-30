@@ -36,7 +36,7 @@ fi
 
 EXTRACT_FOCAL=$BASE_PATH/bin/extract_focal.pl
 
-OS=`uname -o`
+OS=`uname -s`   # uname -o  can't run on MAC
 
 if [ $OS == "Cygwin" ]
 then
