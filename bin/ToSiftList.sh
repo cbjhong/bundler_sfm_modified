@@ -5,7 +5,7 @@
 
 # Set this variable to your base install path (e.g., /home/foo/bundler)
 # BIN_PATH=$(dirname $(which $0));
-BIN_PATH=/Users/yingliang/Projects/MVS/bundler_sfm/bin;
+BIN_PATH=/Users/yingliang/Projects/MVS/bundler_sfm_modified/bin;
 
 if [ $# -ne 1 ]
 then
@@ -31,4 +31,4 @@ IMAGE_LIST=$1
 
 # awk "{pgm = \$1; key = \$1; sub(\"jpg\$\", \"pgm\", pgm); sub(\"jpg\$\", \"key\", key); print \"mogrify -format pgm \" \$1 \"; $SIFT < \" pgm \" > \" key \"; gzip -f \" key \"; rm \" pgm}" $IMAGE_LIST 
 # Changed the line above to make the shell scripts use vlfeat sift and convert to Lowe's format
-awk "{pgm = \$1; key = \$1; sub(\"jpg\$\", \"pgm\", pgm); sub(\"jpg\$\", \"key\", key); print \"mogrify -format pgm \" \$1 \"; $SIFT \" pgm \" -o \" key \"; rm \" pgm; print \"/Users/yingliang/Projects/MVS/bundler_sfm/ToLoweSift.sh \" key}" $IMAGE_LIST
+awk "{pgm = \$1; key = \$1; sub(\"jpg\$\", \"pgm\", pgm); sub(\"jpg\$\", \"key\", key); print \"mogrify -format pgm \" \$1 \"; $SIFT \" pgm \" -o \" key \"; rm \" pgm; print \"/Users/yingliang/Projects/MVS/bundler_sfm_modified/ToLoweSift.sh \" key}" $IMAGE_LIST

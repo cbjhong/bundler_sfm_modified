@@ -26,7 +26,7 @@
 #
 
 # BASE_PATH=$(dirname $(which $0));
-BASE_PATH=/Users/yingliang/Projects/MVS/bundler_sfm;
+BASE_PATH=/Users/yingliang/Projects/MVS/bundler_sfm_modified;
 
 if [ $BASE_PATH == "TODO" ]
 then
