@@ -13,7 +13,7 @@ then
   exit;
 fi
 
-OS=`uname -o`
+OS=`uname -s`
 
 if [ $OS == "Cygwin" ]
 then
